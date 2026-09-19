@@ -97,6 +97,8 @@ sub, sup { font-size: 0.72em; line-height: 0; }
 .navbtn:hover { color: var(--text); border-color: var(--line); }
 .navbtn[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); }
 .navbtn:disabled { opacity: 0.35; cursor: default; }
+.navbtn-lang { font-weight: 600; letter-spacing: 0.08em; font-size: 13px; border-color: var(--line); }
+.draft-note { color: var(--accent); }
 
 .viewport { position: relative; overflow: hidden; }
 .stars { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }

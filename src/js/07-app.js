@@ -205,6 +205,12 @@
     bindClicks(); bindKeys(); bindHistory();
     window.addEventListener('scroll', onReadingScroll, { passive: true });
     window.addEventListener('scroll', onBelowScroll, { passive: true });
+    var langLink = document.getElementById('lang-switch');
+    if (langLink) langLink.addEventListener('click', function () {
+      // переход на другой язык с сохранением текущей сцены
+      var sid = currentSceneId();
+      langLink.href = langLink.getAttribute('href').split('#')[0] + (sid ? '#scene=' + sid : '');
+    });
     document.getElementById('btn-back-up').addEventListener('click', function () {
       goTo(lastSceneId || scenes[0].id, { push: true });
     });

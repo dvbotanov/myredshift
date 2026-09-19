@@ -6,3 +6,4 @@ JSC=/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Helpers
 cat src/js/00-util.js src/js/02-geometry.js tests/geometry.test.js > /tmp/cosmo-tests.js
 "$JSC" /tmp/cosmo-tests.js
 python3 tools/check_data.py
+python3 tools/check_i18n.py
