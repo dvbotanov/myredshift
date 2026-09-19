@@ -115,13 +115,18 @@ Cosmo.scroll = (function () {
     update();
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onResize);
+    // в скрытой вкладке rAF приостановлен — при возврате видимости догоняем состояние
+    document.addEventListener('visibilitychange', onVisible);
   }
+
+  function onVisible() { if (st.enabled && document.visibilityState === 'visible') schedule(); }
 
   function disable() {
     if (!st.enabled) return;
     st.enabled = false;
     window.removeEventListener('scroll', onScroll);
     window.removeEventListener('resize', onResize);
+    document.removeEventListener('visibilitychange', onVisible);
     st.els.section.style.height = '';
     st.els.track.style.transform = '';
     st.els.ribbon.style.transform = '';
@@ -132,6 +137,6 @@ Cosmo.scroll = (function () {
     if (st.pendingRestore) { st.pendingRestore = null; relayout(); }
   }
 
-  return { enable: enable, disable: disable, goTo: goTo, indexOf: indexOf, relayout: relayout, afterDialog: afterDialog, announce: announce,
+  return { enable: enable, disable: disable, goTo: goTo, update: update, indexOf: indexOf, relayout: relayout, afterDialog: afterDialog, announce: announce,
     onActive: function (f) { st.listeners.push(f); }, state: st, isEnabled: function () { return st.enabled; } };
 })();
