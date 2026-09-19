@@ -15,7 +15,8 @@ Cosmo.render = (function () {
     var uri = Cosmo.data.assetUri(id, which);
     if (!a || !uri) return '';
     var size = which === 'thumb' ? ' width="240" height="240"' : ' width="' + a.width + '" height="' + a.height + '"';
-    return '<img class="' + cls + '" src="' + uri + '" alt="' + esc(a.altRu) + '"' + size + ' loading="lazy" decoding="async" style="object-position:' + (a.focalPoint.x * 100) + '% ' + (a.focalPoint.y * 100) + '%"' + (extra || '') + '>';
+    var loading = /loading=/.test(extra || '') ? '' : ' loading="lazy"';
+    return '<img class="' + cls + '" src="' + uri + '" alt="' + esc(a.altRu) + '"' + size + loading + ' decoding="async" style="object-position:' + (a.focalPoint.x * 100) + '% ' + (a.focalPoint.y * 100) + '%"' + (extra || '') + '>';
   }
 
   function credit(a) {

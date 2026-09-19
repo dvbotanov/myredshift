@@ -47,6 +47,8 @@ Cosmo.scroll = (function () {
       a.dataset.far = far ? 'true' : 'false';
       if (far) a.setAttribute('inert', ''); else a.removeAttribute('inert');
       a.classList.toggle('is-active', i === idx);
+      // текущую, предыдущую и следующую сцены подгружаем заранее
+      if (!far) a.querySelectorAll('img[loading="lazy"]').forEach(function (im) { im.loading = 'eager'; });
     });
     st.els.ribbon.querySelectorAll('.marker').forEach(function (m) {
       var mi = Number(m.dataset.sceneIndex), cur = mi === idx;
