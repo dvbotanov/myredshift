@@ -236,7 +236,8 @@
     "focal": [
       0.5,
       0.3
-    ]
+    ],
+    "creator": "NRAO/AUI/NSF, фото Woodruff T. Sullivan III"
   },
   {
     "id": "baade",
@@ -260,7 +261,8 @@
     "focal": [
       0.5,
       0.35
-    ]
+    ],
+    "creator": "NRAO/AUI/NSF, фото Woodruff T. Sullivan III"
   },
   {
     "id": "horn-antenna",
@@ -296,7 +298,8 @@
     "focal": [
       0.5,
       0.3
-    ]
+    ],
+    "creator": "NRAO/AUI/NSF, фото Woodruff T. Sullivan III"
   },
   {
     "id": "rubin",

@@ -119,7 +119,7 @@ def main():
             continue
         hw, hh = dims(hero)
         lic = info["license"] or "лицензия не указана"
-        artist = info["artist"] or "автор не указан"
+        artist = w.get("creator") or info["artist"] or "автор не указан"
         manifest.append({
             "id": aid,
             "localPath": f"assets/img/{aid}.jpg",

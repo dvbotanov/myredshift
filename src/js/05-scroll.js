@@ -3,7 +3,7 @@
 Cosmo.scroll = (function () {
   var G = Cosmo.geometry, U = Cosmo.util;
   var st = {
-    enabled: false, scenes: [], n: 0, W: 0, H: 0, T: 0, S: 0, k: 1, sectionTop: 0,
+    enabled: false, scenes: [], n: 0, W: 0, H: 0, T: 0, S: 0, k: 1, p: 0.45, lay: null, sectionTop: 0,
     x: 0, active: -1, raf: null, els: {}, listeners: [], pendingRestore: null
   };
 
@@ -13,8 +13,8 @@ Cosmo.scroll = (function () {
     var vp = st.els.viewport;
     st.W = vp.clientWidth;
     st.H = st.els.stage.clientHeight;
-    var lay = G.layout(st.W, st.H, st.n, st.k);
-    st.T = lay.T; st.S = lay.S;
+    var lay = G.layout(st.W, st.H, st.n, st.k, U.prefersReducedMotion() ? 0 : st.p);
+    st.lay = lay; st.T = lay.T; st.S = lay.S;
     document.documentElement.style.setProperty('--W', st.W + 'px');
     st.els.section.style.height = lay.sectionHeight + 'px';
     st.sectionTop = st.els.section.getBoundingClientRect().top + window.scrollY;
@@ -28,14 +28,16 @@ Cosmo.scroll = (function () {
 
   function update() {
     if (!st.enabled) return;
-    st.x = G.xFromScroll(window.scrollY, st.sectionTop, st.S, st.T);
+    st.x = G.xFromScroll(window.scrollY, st.sectionTop, st.lay);
     var tx = 'translate3d(' + (-st.x).toFixed(2) + 'px,0,0)';
     st.els.track.style.transform = tx;
     st.els.ribbon.style.transform = tx;
     var idx = G.activeIndex(st.x, st.W, st.n);
     if (idx !== st.active) setActive(idx);
     var fill = q('progress-fill');
-    if (fill) fill.style.width = (st.T > 0 ? st.x / st.T * 100 : 0).toFixed(2) + '%';
+    // прогресс — по пройденному пути прокрутки, чтобы он рос и на «полках»
+    var y = U.clamp(window.scrollY - st.sectionTop, 0, st.S);
+    if (fill) fill.style.width = (st.S > 0 ? y / st.S * 100 : 0).toFixed(2) + '%';
   }
 
   function setActive(idx) {
@@ -73,7 +75,7 @@ Cosmo.scroll = (function () {
   function goTo(idx, opts) {
     opts = opts || {};
     idx = U.clamp(idx, 0, st.n - 1);
-    var y = G.scrollFromX(G.sceneX(idx, st.W), st.sectionTop, st.S, st.T);
+    var y = G.scrollFromX(G.sceneX(idx, st.W), st.sectionTop, st.lay);
     var behavior = (opts.instant || U.prefersReducedMotion()) ? 'auto' : 'smooth';
     if (opts.push) history.pushState(null, '', '#scene=' + st.scenes[idx].id);
     window.scrollTo({ top: Math.round(y), behavior: behavior });
@@ -98,7 +100,7 @@ Cosmo.scroll = (function () {
     var p = G.progressInScene(st.x, st.W, idx);
     measure();
     var x = G.sceneX(idx, st.W) + p * st.W;
-    window.scrollTo({ top: Math.round(G.scrollFromX(x, st.sectionTop, st.S, st.T)), behavior: 'auto' });
+    window.scrollTo({ top: Math.round(G.scrollFromX(x, st.sectionTop, st.lay)), behavior: 'auto' });
     st.active = -1;
     update();
   }

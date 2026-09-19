@@ -138,6 +138,29 @@
     });
   }
 
+  /* Кнопка «К экспозиции»: появляется, когда экспозиция ушла вверх, и возвращает к последней сцене */
+  var lastSceneId = null, backRaf = null;
+  function onBelowScroll() {
+    if (backRaf) return;
+    backRaf = requestAnimationFrame(function () {
+      backRaf = null;
+      var story = document.getElementById('story'), btn = document.getElementById('btn-back-up');
+      if (!story || !btn) return;
+      var bottom = story.offsetTop + story.offsetHeight;
+      var below = window.scrollY > bottom - window.innerHeight * 0.6;
+      if (!below) {
+        var inStory = window.scrollY + window.innerHeight * 0.5 > story.offsetTop;
+        if (inStory) lastSceneId = currentSceneId();
+      }
+      btn.hidden = !below;
+      var label = document.getElementById('btn-back-up-label');
+      if (label && below && lastSceneId) {
+        var sc = Cosmo.data.byId.scenes[lastSceneId];
+        label.textContent = 'К экспозиции · ' + (sc ? sc.dateLabel : '');
+      }
+    });
+  }
+
   /* В режиме чтения верхняя строка показывает дату сцены, ближайшей к верху окна */
   var readingRaf = null;
   function onReadingScroll() {
@@ -181,6 +204,10 @@
     Cosmo.dialog.init();
     bindClicks(); bindKeys(); bindHistory();
     window.addEventListener('scroll', onReadingScroll, { passive: true });
+    window.addEventListener('scroll', onBelowScroll, { passive: true });
+    document.getElementById('btn-back-up').addEventListener('click', function () {
+      goTo(lastSceneId || scenes[0].id, { push: true });
+    });
     if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 
     var view = decideView();

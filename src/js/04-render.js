@@ -1,13 +1,20 @@
 /* Рендер сцен, нижней шкалы и разделов под экспозицией */
 Cosmo.render = (function () {
   var U = Cosmo.util, esc = U.esc, fmt = U.fmt, el = U.el;
-  var BADGE = { 'Идея': ['badge-idea', '◇'], 'Измерение': ['badge-measure', '●'], 'Пересмотр': ['badge-revision', '▲'], 'Открытый вопрос': ['badge-open', '?'], 'Пролог': ['badge-prologue', '✦'] };
+  var GLYPH = {
+    diamond: '<svg viewBox="0 0 10 10" aria-hidden="true"><path d="M5 .8 9.2 5 5 9.2.8 5Z" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>',
+    circle: '<svg viewBox="0 0 10 10" aria-hidden="true"><circle cx="5" cy="5" r="3.6" fill="currentColor"/></svg>',
+    triangle: '<svg viewBox="0 0 10 10" aria-hidden="true"><path d="M5 1.2 9.3 8.8H.7Z" fill="currentColor"/></svg>',
+    question: '<svg viewBox="0 0 10 10" aria-hidden="true"><circle cx="5" cy="5" r="4" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 1.5"/><text x="5" y="7.3" text-anchor="middle" font-size="6.5" font-weight="700" fill="currentColor">?</text></svg>',
+    star: '<svg viewBox="0 0 10 10" aria-hidden="true"><path d="M5 .5 6.1 3.9 9.5 5 6.1 6.1 5 9.5 3.9 6.1.5 5 3.9 3.9Z" fill="currentColor"/></svg>'
+  };
+  var BADGE = { 'Идея': ['badge-idea', 'diamond'], 'Измерение': ['badge-measure', 'circle'], 'Пересмотр': ['badge-revision', 'triangle'], 'Открытый вопрос': ['badge-open', 'question'], 'Пролог': ['badge-prologue', 'star'] };
 
   function terms() { return Cosmo.data.get().glossary; }
 
   function badge(label) {
-    var b = BADGE[label] || ['', '·'];
-    return '<span class="badge ' + b[0] + '"><span class="glyph" aria-hidden="true">' + b[1] + '</span>' + esc(label) + '</span>';
+    var b = BADGE[label] || ['', 'circle'];
+    return '<span class="badge ' + b[0] + '"><span class="glyph">' + GLYPH[b[1]] + '</span><span class="badge-text">' + esc(label) + '</span></span>';
   }
 
   function assetImg(id, which, cls, extra) {
@@ -26,13 +33,13 @@ Cosmo.render = (function () {
   function hero(scene) {
     if (scene.heroAssetId === 'prologue-sky') {
       var t = document.getElementById('prologue-svg');
-      return '<figure class="hero hero-svg" data-kind="illustration">' + (t ? t.innerHTML : '') +
+      return '<figure class="hero hero-svg" data-kind="illustration"><div class="hero-frame">' + (t ? t.innerHTML : '') + '</div>' +
         '<figcaption class="caption">Художественная реконструкция: человек у входа в пещеру под ночным небом. Авторская иллюстрация, не фотография археологического объекта.</figcaption></figure>';
     }
     var a = Cosmo.data.byId.assets[scene.heroAssetId];
     if (!a) return '';
     var img = assetImg(a.id, 'img', 'hero-img', ' loading="' + (scene.order <= 2 ? 'eager' : 'lazy') + '"' + (scene.order === 1 ? ' fetchpriority="high"' : ''));
-    return '<figure class="hero" data-kind="' + esc(a.kind) + '">' + img + '<figcaption class="caption">' + fmt(a.captionRu) + credit(a) + '</figcaption></figure>';
+    return '<figure class="hero" data-kind="' + esc(a.kind) + '"><div class="hero-frame">' + img + '</div><figcaption class="caption">' + fmt(a.captionRu) + credit(a) + '</figcaption></figure>';
   }
 
   function miniEntity(ent) {
@@ -188,7 +195,7 @@ Cosmo.render = (function () {
 
   function imageCredits(assets) {
     return '<div class="credits">' + assets.map(function (a) {
-      return '<div class="credit">' + assetImg(a.id, 'thumb', '') + '<div><strong>' + esc(a.subject) + '</strong> — ' + esc(a.captionRu) + '<br><span class="muted">' + esc(a.creator) + ' · ' + esc(a.licenseLabel) + (a.licenseUrl ? ' (<a href="' + esc(a.licenseUrl) + '" target="_blank" rel="noopener">условия</a>)' : '') + ' · <a href="' + esc(a.sourcePageUrl) + '" target="_blank" rel="noopener">страница файла</a>' + (a.rightsStatus !== 'verified' ? ' · права не подтверждены' : '') + '</span></div></div>';
+      return '<div class="credit-row">' + assetImg(a.id, 'thumb', '') + '<div><strong>' + esc(a.subject) + '</strong> — ' + esc(a.captionRu) + '<br><span class="muted">' + esc(a.creator) + ' · ' + esc(a.licenseLabel) + (a.licenseUrl ? ' (<a href="' + esc(a.licenseUrl) + '" target="_blank" rel="noopener">условия</a>)' : '') + ' · <a href="' + esc(a.sourcePageUrl) + '" target="_blank" rel="noopener">страница файла</a>' + (a.rightsStatus !== 'verified' ? ' · права не подтверждены' : '') + '</span></div></div>';
     }).join('') + '</div>';
   }
 
