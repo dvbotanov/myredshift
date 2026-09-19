@@ -25,6 +25,9 @@ SRC = os.path.join(ROOT, "src")
 DIST = os.path.join(ROOT, "dist")
 I18N = os.path.join(SRC, "i18n")
 
+SITE_URL = "https://myredshift.space"
+DOMAIN = "myredshift.space"
+
 JS_ORDER = ["00-util.js", "01-data.js", "02-geometry.js", "03-diagrams.js",
             "04-render.js", "05-scroll.js", "06-dialog.js", "07-app.js"]
 
@@ -219,6 +222,10 @@ def build_lang(lang, single, tpl, css, js, data):
                         '<script type="application/json" id="site-assets">' + json_for_script(uris) + "</script>")
     page = page.replace("<!--INLINE:noscript-->", "<noscript>" + noscript_html(d, ui) + "</noscript>")
     page = page.replace("{{CHECKED_DATE}}", cfg["checked"])
+    page = page.replace("{{PAGE_URL}}", SITE_URL + "/" + ("" if cfg["file"] == "index.html" else cfg["file"]))
+    page = page.replace("{{OG_IMAGE}}", SITE_URL + "/assets/img/hudf.jpg")
+    page = page.replace("{{URL_RU}}", SITE_URL + "/").replace("{{URL_KK}}", SITE_URL + "/kk.html")
+    page = page.replace("{{OG_LOCALE}}", "kk_KZ" if lang == "kk" else "ru_RU")
     out = os.path.join(DIST, cfg["file"])
     with open(out, "w", encoding="utf-8") as f:
         f.write(page)
@@ -227,6 +234,28 @@ def build_lang(lang, single, tpl, css, js, data):
         print(f"! {cfg['file']}: незаполненные плейсхолдеры:", leftovers)
         return None
     return out
+
+
+def write_site_files():
+    """Служебные файлы для публикации: домен, отключение Jekyll, robots, sitemap, 404."""
+    with open(os.path.join(DIST, "CNAME"), "w") as f:
+        f.write(DOMAIN + "\n")
+    open(os.path.join(DIST, ".nojekyll"), "w").close()
+    with open(os.path.join(DIST, "robots.txt"), "w") as f:
+        f.write(f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n")
+    with open(os.path.join(DIST, "sitemap.xml"), "w", encoding="utf-8") as f:
+        f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n')
+        for loc in (SITE_URL + "/", SITE_URL + "/kk.html"):
+            f.write(f'  <url><loc>{loc}</loc>'
+                    f'<xhtml:link rel="alternate" hreflang="ru" href="{SITE_URL}/"/>'
+                    f'<xhtml:link rel="alternate" hreflang="kk" href="{SITE_URL}/kk.html"/></url>\n')
+        f.write("</urlset>\n")
+    with open(os.path.join(DIST, "404.html"), "w", encoding="utf-8") as f:
+        f.write('<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
+                '<title>Страница не найдена</title><style>html{background:#080D18;color:#F1F4F8;font-family:-apple-system,Segoe UI,Roboto,sans-serif}'
+                'body{margin:0;min-height:100vh;display:grid;place-items:center;text-align:center;padding:24px}a{color:#7DCBE8}h1{font-weight:500}</style></head>'
+                '<body><div><h1>Такой страницы нет</h1><p>Экспозиция «Вселенная. История расширения» живёт на главной.</p>'
+                '<p><a href="/">Перейти к экспозиции</a> · <a href="/kk.html">Қазақша</a></p></div></body></html>')
 
 
 def main():
@@ -249,6 +278,7 @@ def main():
         if not out:
             return 1
         outs.append(out)
+    write_site_files()
     sizes = ", ".join(f"{os.path.basename(o)} {os.path.getsize(o)/1024:.0f} КБ" for o in outs)
     if single:
         print("dist/ (единые файлы): " + ", ".join(f"{os.path.basename(o)} {os.path.getsize(o)/1024/1024:.2f} МБ" for o in outs))
