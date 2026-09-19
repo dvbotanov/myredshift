@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Вселенная. История расширения</title>
+<meta name="description" content="От звёздного неба до космологии высокой точности: как менялись представления о расширении Вселенной. Интерактивная экспозиция с горизонтальной шкалой открытий.">
+<meta name="color-scheme" content="dark">
+<!--INLINE:fonts-->
+<!--INLINE:css-->
+</head>
+<body data-view="horizontal">
+<a class="skip" href="#chapters">Перейти к оглавлению</a>
+<div id="app">
+  <section id="story" class="story" aria-label="Экспозиция">
+    <div class="stage" id="stage">
+      <header class="topbar">
+        <a class="brand" href="#scene=prologue" data-goto="prologue">
+          <span class="brand-name">Вселенная</span>
+          <span class="brand-sub">История расширения</span>
+        </a>
+        <span class="topbar-now" id="topbar-now" aria-hidden="true"></span>
+        <nav class="topnav" aria-label="Разделы">
+          <button type="button" class="navbtn" id="btn-chapters" aria-haspopup="dialog">Главы</button>
+          <a class="navbtn" href="#glossary">Словарь</a>
+          <a class="navbtn" href="#sources">Источники</a>
+          <button type="button" class="navbtn navbtn-view" id="btn-view" aria-pressed="false">Вид чтения</button>
+        </nav>
+      </header>
+      <div class="viewport" id="viewport">
+        <canvas class="stars" id="stars" aria-hidden="true"></canvas>
+        <div class="track" id="track"></div>
+      </div>
+      <div class="dock" id="dock" aria-label="Шкала времени открытий">
+        <div class="ribbon-wrap" id="ribbon-wrap">
+          <div class="ribbon" id="ribbon"></div>
+          <div class="pointer" aria-hidden="true"></div>
+        </div>
+        <div class="overview">
+          <div class="overview-chapters" id="overview-chapters" role="group" aria-label="Главы экспозиции"></div>
+          <p class="scale-note">Масштаб времени условный: расстояния между событиями адаптированы для чтения.</p>
+          <div class="scene-nav" id="scene-nav" role="group" aria-label="Переход между сценами">
+            <button type="button" class="navbtn" id="btn-prev" aria-label="Предыдущая сцена">← Назад</button>
+            <span class="scene-counter" id="scene-counter" aria-live="off"></span>
+            <button type="button" class="navbtn" id="btn-next" aria-label="Следующая сцена">Далее →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="below">
+    <section id="chapters" class="section" aria-labelledby="chapters-h">
+      <h2 id="chapters-h">Главы</h2>
+      <p class="section-intro">Двадцать сцен в пяти периодах. Порядок редакционный: некоторые периоды пересекаются.</p>
+      <div id="chapters-list"></div>
+    </section>
+    <section id="chronology" class="section" aria-labelledby="chronology-h">
+      <h2 id="chronology-h">Полная хронология</h2>
+      <p class="section-intro">Все 43 события исследовательской базы в порядке дат. Часть из них не получила отдельной сцены, но доступна здесь целиком с источниками.</p>
+      <div id="chronology-list"></div>
+    </section>
+    <section id="glossary" class="section" aria-labelledby="glossary-h">
+      <h2 id="glossary-h">Словарь</h2>
+      <p class="section-intro">Короткие определения величин, которые встречаются в экспозиции.</p>
+      <dl id="glossary-list" class="glossary"></dl>
+    </section>
+    <section id="sources" class="section" aria-labelledby="sources-h">
+      <h2 id="sources-h">Источники и права</h2>
+      <p class="section-intro"><strong>Научные данные проверены: {{CHECKED_DATE}}.</strong> Ниже — источники по сценам, кредиты изображений и полный список ссылок.</p>
+      <h3>Источники по сценам</h3>
+      <div id="sources-by-scene"></div>
+      <h3>Изображения</h3>
+      <p class="section-intro">Все фотографии — архивные или документальные, из Wikimedia Commons и архивов обсерваторий; у каждой указаны автор, лицензия и страница источника. Пролог — авторская иллюстрация. Генеративных «архивных» изображений на сайте нет.</p>
+      <div id="image-credits"></div>
+      <h3>Полный список ссылок</h3>
+      <ol id="sources-list" class="sources-list"></ol>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>«Вселенная. История расширения» — научно-популярная экспозиция об эволюции представлений о расширении Вселенной. Шкала внизу экспозиции показывает годы открытий, а не возраст космоса.</p>
+    <p>Шрифт IBM Plex (SIL Open Font License). Сайт статический, не собирает данные и не использует аккаунты.</p>
+  </footer>
+</div>
+
+<div id="live" class="sr-only" aria-live="polite"></div>
+
+<dialog id="dialog" class="dialog" aria-labelledby="dialog-title">
+  <div class="dialog-head">
+    <h2 id="dialog-title" class="dialog-title" tabindex="-1"></h2>
+    <button type="button" class="dialog-close" id="dialog-close" aria-label="Закрыть">✕</button>
+  </div>
+  <div class="dialog-body" id="dialog-body"></div>
+</dialog>
+
+<template id="prologue-svg">
+<svg viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Художественная реконструкция: человек стоит у входа в пещеру под звёздным небом">
+  <defs>
+    <linearGradient id="pg-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#050912"/><stop offset="0.55" stop-color="#0B1630"/><stop offset="1" stop-color="#16233F"/>
+    </linearGradient>
+    <linearGradient id="pg-ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0A0F1C"/><stop offset="1" stop-color="#05080F"/>
+    </linearGradient>
+    <radialGradient id="pg-ember" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#F2C46D" stop-opacity="0.55"/><stop offset="1" stop-color="#F2C46D" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="pg-blur" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="28"/></filter>
+  </defs>
+  <rect width="1200" height="760" fill="url(#pg-sky)"/>
+  <ellipse cx="760" cy="230" rx="620" ry="120" fill="#7DCBE8" opacity="0.07" filter="url(#pg-blur)" transform="rotate(-18 760 230)"/>
+  <g fill="#F1F4F8">
+    <circle cx="92" cy="88" r="1.6"/><circle cx="184" cy="142" r="1.1"/><circle cx="251" cy="63" r="1.4"/><circle cx="332" cy="171" r="1"/>
+    <circle cx="401" cy="97" r="1.8"/><circle cx="468" cy="214" r="1.1"/><circle cx="532" cy="52" r="1.3"/><circle cx="596" cy="151" r="1"/>
+    <circle cx="655" cy="103" r="2"/><circle cx="717" cy="188" r="1.2"/><circle cx="781" cy="71" r="1.5"/><circle cx="846" cy="129" r="1"/>
+    <circle cx="903" cy="41" r="1.4"/><circle cx="962" cy="176" r="1.7"/><circle cx="1031" cy="92" r="1.1"/><circle cx="1097" cy="147" r="1.3"/>
+    <circle cx="1152" cy="58" r="1"/><circle cx="141" cy="243" r="1.2"/><circle cx="288" cy="286" r="1"/><circle cx="371" cy="251" r="1.5"/>
+    <circle cx="447" cy="318" r="1"/><circle cx="521" cy="273" r="1.2"/><circle cx="609" cy="332" r="1"/><circle cx="688" cy="264" r="1.6"/>
+    <circle cx="762" cy="336" r="1.1"/><circle cx="833" cy="289" r="1.3"/><circle cx="917" cy="331" r="1"/><circle cx="996" cy="254" r="1.4"/>
+    <circle cx="1074" cy="309" r="1.1"/><circle cx="1138" cy="238" r="1.6"/><circle cx="58" cy="329" r="1.2"/><circle cx="214" cy="388" r="1"/>
+    <circle cx="347" cy="402" r="1.3"/><circle cx="486" cy="381" r="1"/><circle cx="574" cy="422" r="1.1"/><circle cx="742" cy="398" r="1.4"/>
+    <circle cx="879" cy="416" r="1"/><circle cx="1012" cy="392" r="1.2"/><circle cx="1121" cy="431" r="1"/><circle cx="668" cy="20" r="1.2"/>
+    <circle cx="820" cy="34" r="1"/><circle cx="26" cy="182" r="1.4"/><circle cx="1180" cy="356" r="1.1"/><circle cx="560" cy="460" r="0.9"/>
+  </g>
+  <path d="M0 520 C 180 470, 300 500, 430 480 S 700 430, 860 470 S 1080 440, 1200 465 L1200 760 L0 760 Z" fill="url(#pg-ground)"/>
+  <path d="M0 400 C 60 330, 140 300, 250 330 C 320 350, 360 420, 380 470 L 380 760 L 0 760 Z" fill="#070B14"/>
+  <path d="M120 560 C 150 470, 230 430, 300 470 C 330 500, 340 560, 330 620 L 120 620 Z" fill="#03050A"/>
+  <ellipse cx="225" cy="600" rx="90" ry="40" fill="url(#pg-ember)"/>
+  <g fill="#0B0F19">
+    <circle cx="300" cy="512" r="12"/>
+    <path d="M300 524 C 292 524, 286 534, 286 548 L 284 600 L 292 600 L 296 560 L 304 560 L 308 600 L 316 600 L 314 548 C 314 534, 308 524, 300 524 Z"/>
+    <path d="M287 536 L 262 566 L 267 570 L 290 546 Z"/>
+  </g>
+  <text x="1170" y="738" text-anchor="end" font-family="IBM Plex Sans, system-ui, sans-serif" font-size="18" fill="#ABB7C9" opacity="0.9">Художественная реконструкция</text>
+</svg>
+</template>
+
+<!--INLINE:noscript-->
+<!--INLINE:data-->
+<!--INLINE:js-->
+</body>
+</html>

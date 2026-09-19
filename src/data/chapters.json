@@ -1,0 +1,7 @@
+[
+  {"id": "before", "title": "До измерений", "subtitle": "Небо, которое можно было только наблюдать", "sceneIds": ["prologue"]},
+  {"id": "early-xx", "title": "Начало XX века", "subtitle": "1908–1933 · расстояния, скорости, другие галактики", "sceneIds": ["measuring-light", "dynamic-universe", "other-galaxies", "expansion-law", "cosmic-models"]},
+  {"id": "hot-past", "title": "Горячее прошлое", "subtitle": "1948–1970-е · Большой взрыв, реликтовое излучение, тёмная материя", "sceneIds": ["hot-or-steady", "distance-revision", "cosmic-hiss", "invisible-matter"]},
+  {"id": "precision", "title": "Точная космология", "subtitle": "1980–2020 · инфляция, ускорение, паспорт Planck", "sceneIds": ["inflation", "cmb-structure", "acceleration", "precision-era", "cosmic-ruler", "planck"]},
+  {"id": "today", "title": "Сегодня", "subtitle": "2017–2026 · новые линейки и открытые вопросы", "sceneIds": ["new-rulers", "modern-observatories", "new-tensions", "open-future"]}
+]

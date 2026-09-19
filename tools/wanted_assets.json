@@ -1,0 +1,624 @@
+[
+  {
+    "id": "leavitt",
+    "commons": "File:Henrietta Swan Leavitt.jpg",
+    "kind": "portrait",
+    "subject": "Генриетта Ливитт",
+    "altRu": "Портрет Генриетты Ливитт, чёрно-белая фотография",
+    "captionRu": "Генриетта Ливитт, астроном Гарвардской обсерватории",
+    "focal": [
+      0.5,
+      0.3
+    ]
+  },
+  {
+    "id": "leavitt-figure",
+    "commons": "File:Leavitt 1912 figures 1&2.png",
+    "kind": "archive",
+    "subject": "Диаграмма Ливитт 1912 года",
+    "altRu": "Две диаграммы из статьи 1912 года: зависимость яркости цефеид от периода",
+    "captionRu": "Диаграммы из статьи Ливитт и Пикеринга 1912 года: связь периода и видимой яркости 25 цефеид Малого Магелланова Облака",
+    "focal": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "slipher",
+    "commons": "File:Group at Clark Telescope in 1905.jpg",
+    "kind": "portrait",
+    "subject": "Весто Слайфер",
+    "altRu": "Сотрудники обсерватории Лоуэлла у телескопа Кларка в 1905 году; Весто Слайфер — третий слева",
+    "captionRu": "Весто Слайфер (третий слева) среди сотрудников обсерватории Лоуэлла у телескопа Кларка, 1905",
+    "focal": [
+      0.57,
+      0.5
+    ],
+    "thumbCrop": [
+      0.57,
+      0.5,
+      0.2
+    ]
+  },
+  {
+    "id": "slipher-spectrograph",
+    "commons": "File:Slipher spectrograph measured expanding universe - Flickr - brewbooks.jpg",
+    "kind": "instrument",
+    "subject": "Спектрограф Слайфера",
+    "altRu": "Исторический спектрограф обсерватории Лоуэлла в музейной витрине",
+    "captionRu": "Спектрограф обсерватории Лоуэлла, на котором Слайфер измерял скорости туманностей",
+    "focal": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "einstein",
+    "commons": "File:Albert Einstein by the Harris & Ewing Studio, 1921, gelatin silver print, from the National Portrait Gallery - NPG-S-NPG 84 288.jpg",
+    "kind": "portrait",
+    "subject": "Альберт Эйнштейн",
+    "altRu": "Портрет Альберта Эйнштейна, 1921 год",
+    "captionRu": "Альберт Эйнштейн, 1921. Студия Harris & Ewing",
+    "focal": [
+      0.5,
+      0.3
+    ]
+  },
+  {
+    "id": "friedmann",
+    "commons": "File:Aleksandr Fridman.png",
+    "kind": "portrait",
+    "subject": "Александр Фридман",
+    "altRu": "Портрет Александра Фридмана",
+    "captionRu": "Александр Фридман",
+    "focal": [
+      0.5,
+      0.3
+    ]
+  },
+  {
+    "id": "desitter",
+    "commons": "File:Willem de Sitter, 1923.jpg",
+    "kind": "portrait",
+    "subject": "Виллем де Ситтер",
+    "altRu": "Портрет Виллема де Ситтера, 1923 год",
+    "captionRu": "Виллем де Ситтер, 1923",
+    "focal": [
+      0.5,
+      0.3
+    ]
+  },
+  {
+    "id": "hubble",
+    "commons": "File:Studio portrait photograph of Edwin Powell Hubble.JPG",
+    "kind": "portrait",
+    "subject": "Эдвин Хаббл",
+    "altRu": "Студийный портрет Эдвина Хаббла",
+    "captionRu": "Эдвин Хаббл. Студийный портрет Йохана Хагемейера",
+    "focal": [
+      0.5,
+      0.3
+    ]
+  },
+  {
+    "id": "hubble-at-hooker",
+    "commons": "File:Hubble at 100-inch (19950424 cd3 07-CC).jpg",
+    "kind": "archive",
+    "subject": "Хаббл у 100-дюймового телескопа",
+    "altRu": "Эдвин Хаббл за окуляром 100-дюймового телескопа Hooker на Маунт-Вилсон",
+    "captionRu": "Эдвин Хаббл у 100-дюймового телескопа Hooker на Маунт-Вилсон",
+    "focal": [
+      0.5,
+      0.4
+    ]
+  },
+  {
+    "id": "hooker",
+    "commons": "File:100 inch Hooker Telescope 900 px.jpg",
+    "kind": "instrument",
+    "subject": "Телескоп Hooker",
+    "altRu": "100-дюймовый телескоп Hooker внутри купола обсерватории Маунт-Вилсон",
+    "captionRu": "100-дюймовый телескоп Hooker, обсерватория Маунт-Вилсон",
+    "focal": [
+      0.5,
+      0.4
+    ]
+  },
+  {
+    "id": "var-plate",
+    "commons": "File:Snapshots of the star that changed the Universe (opo1115d).jpg",
+    "kind": "archive",
+    "subject": "Пластинка VAR! и звезда V1",
+    "altRu": "Коллаж NASA/ESA: галактика Андромеда, фрагмент пластинки Хаббла 1923 года с надписью VAR! и снимки звезды V1 телескопом Hubble",
+    "captionRu": "Иллюстрация NASA/ESA: Андромеда, фрагмент пластинки Хаббла 1923 года с пометкой VAR! и переменная V1 на снимках телескопа Hubble",
+    "focal": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "andromeda",
+    "commons": "File:Andromeda Galaxy (with h-alpha).jpg",
+    "kind": "archive",
+    "subject": "Галактика Андромеда",
+    "altRu": "Галактика Андромеда: наклонённый спиральный диск на тёмном небе",
+    "captionRu": "Галактика Андромеда (M31)",
+    "focal": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "lemaitre",
+    "commons": "File:Lemaitre Burroughs.jpg",
+    "kind": "archive",
+    "subject": "Жорж Леметр",
+    "altRu": "Жорж Леметр и Андре Бартоломе за вычислительной машиной Burroughs E101, 1959 год",
+    "captionRu": "Жорж Леметр (справа) и Андре Бартоломе за вычислительной машиной Burroughs E101 в Лёвене, май 1959",
+    "focal": [
+      0.62,
+      0.42
+    ],
+    "thumbCrop": [
+      0.66,
+      0.35,
+      0.3
+    ]
+  },
+  {
+    "id": "coma",
+    "commons": "File:Coma Cluster (noirlab2420a).jpg",
+    "kind": "archive",
+    "subject": "Скопление Волос Вероники",
+    "altRu": "Скопление галактик Волос Вероники: множество эллиптических галактик на тёмном фоне",
+    "captionRu": "Скопление галактик Волос Вероники — объект, по которому Цвикки заметил недостающую массу",
+    "focal": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "zwicky",
+    "commons": "File:ETH-BIB-Zwicky, Fritz (1898-1974)-Portr 01030.tif",
+    "kind": "portrait",
+    "subject": "Фриц Цвикки",
+    "altRu": "Портрет Фрица Цвикки",
+    "captionRu": "Фриц Цвикки. Архив ETH Zürich",
+    "focal": [
+      0.5,
+      0.35
+    ]
+  },
+  {
+    "id": "gamow",
+    "commons": "File:Bragg lab1 1930 (cropped).jpg",
+    "kind": "portrait",
+    "subject": "Георгий Гамов",
+    "altRu": "Георгий Гамов в лаборатории Брэгга, 1931 год",
+    "captionRu": "Георгий Гамов в лаборатории У. Г. Брэгга, 1931",
+    "focal": [
+      0.5,
+      0.3
+    ]
+  },
+  {
+    "id": "alpher",
+    "commons": "File:Ralph Alpher.jpg",
+    "kind": "portrait",
+    "subject": "Ральф Альфер",
+    "altRu": "Портрет Ральфа Альфера",
+    "captionRu": "Ральф Альфер. Архив Alpher Papers",
+    "focal": [
+      0.5,
+      0.35
+    ]
+  },
+  {
+    "id": "hoyle",
+    "commons": "File:Fred Hoyle.jpg",
+    "kind": "portrait",
+    "subject": "Фред Хойл",
+    "altRu": "Портрет Фреда Хойла",
+    "captionRu": "Фред Хойл",
+    "focal": [
+      0.5,
+      0.3
+    ]
+  },
+  {
+    "id": "baade",
+    "commons": "File:Walter-Baade Astronom.jpg",
+    "kind": "portrait",
+    "subject": "Вальтер Бааде",
+    "altRu": "Портрет Вальтера Бааде",
+    "captionRu": "Вальтер Бааде",
+    "focal": [
+      0.5,
+      0.3
+    ]
+  },
+  {
+    "id": "sandage",
+    "commons": "File:Allan Sandage.jpg",
+    "kind": "portrait",
+    "subject": "Аллан Сэндидж",
+    "altRu": "Портрет Аллана Сэндиджа",
+    "captionRu": "Аллан Сэндидж",
+    "focal": [
+      0.5,
+      0.35
+    ]
+  },
+  {
+    "id": "horn-antenna",
+    "commons": "File:Horn Antenna-in Holmdel, New Jersey - restoration1.jpg",
+    "kind": "instrument",
+    "subject": "Рупорная антенна Холмдела",
+    "altRu": "Большая рупорная антенна Bell Labs в Холмделе на фоне неба",
+    "captionRu": "Рупорная антенна Bell Labs в Холмделе, Нью-Джерси",
+    "focal": [
+      0.5,
+      0.45
+    ]
+  },
+  {
+    "id": "penzias",
+    "commons": "File:Arno Penzias.jpg",
+    "kind": "portrait",
+    "subject": "Арно Пензиас",
+    "altRu": "Портрет Арно Пензиаса",
+    "captionRu": "Арно Пензиас",
+    "focal": [
+      0.5,
+      0.4
+    ]
+  },
+  {
+    "id": "wilson",
+    "commons": "File:Robert W. Wilson, 1981.jpg",
+    "kind": "portrait",
+    "subject": "Роберт Вильсон",
+    "altRu": "Портрет Роберта Вильсона, 1981 год",
+    "captionRu": "Роберт Вильсон, 1981",
+    "focal": [
+      0.5,
+      0.3
+    ]
+  },
+  {
+    "id": "rubin",
+    "commons": "File:Vera Rubin measuring spectra.jpg",
+    "kind": "archive",
+    "subject": "Вера Рубин",
+    "altRu": "Вера Рубин измеряет спектры за прибором в Институте Карнеги, 1974 год",
+    "captionRu": "Вера Рубин измеряет спектры в Отделе земного магнетизма Института Карнеги, 1974",
+    "focal": [
+      0.5,
+      0.4
+    ]
+  },
+  {
+    "id": "guth",
+    "commons": "File:AlanGuthCambridge.jpg",
+    "kind": "portrait",
+    "subject": "Алан Гут",
+    "altRu": "Портрет Алана Гута",
+    "captionRu": "Алан Гут",
+    "focal": [
+      0.5,
+      0.3
+    ]
+  },
+  {
+    "id": "linde",
+    "commons": "File:Andrei Linde 2018.jpg",
+    "kind": "portrait",
+    "subject": "Андрей Линде",
+    "altRu": "Портрет Андрея Линде, 2018 год",
+    "captionRu": "Андрей Линде, 2018",
+    "focal": [
+      0.5,
+      0.3
+    ]
+  },
+  {
+    "id": "starobinsky",
+    "commons": "File:Alexei Starobinsky, recipient of the 2013 Gruber Prize (iau1304b).jpg",
+    "kind": "portrait",
+    "subject": "Алексей Старобинский",
+    "altRu": "Портрет Алексея Старобинского",
+    "captionRu": "Алексей Старобинский, лауреат премии Грубера 2013 года",
+    "focal": [
+      0.5,
+      0.3
+    ]
+  },
+  {
+    "id": "cobe",
+    "commons": "File:COBE Celebrates 35th Launch Anniversary (SVS14715 - COBE final integration 1989).jpg",
+    "kind": "instrument",
+    "subject": "Спутник COBE",
+    "altRu": "Спутник COBE в цехе окончательной сборки, 1989 год",
+    "captionRu": "Спутник COBE перед запуском, 1989",
+    "focal": [
+      0.5,
+      0.45
+    ]
+  },
+  {
+    "id": "mather",
+    "commons": "File:John-C-Mather.jpg",
+    "kind": "portrait",
+    "subject": "Джон Мазер",
+    "altRu": "Портрет Джона Мазера",
+    "captionRu": "Джон Мазер",
+    "focal": [
+      0.5,
+      0.3
+    ]
+  },
+  {
+    "id": "smoot",
+    "commons": "File:George smoot 06N7133a.jpg",
+    "kind": "portrait",
+    "subject": "Джордж Смут",
+    "altRu": "Портрет Джорджа Смута",
+    "captionRu": "Джордж Смут",
+    "focal": [
+      0.5,
+      0.3
+    ]
+  },
+  {
+    "id": "sn1994d",
+    "commons": "File:Supernova 1994D in the galaxy NGC 4526 (ann11014a).jpg",
+    "kind": "archive",
+    "subject": "Сверхновая 1994D",
+    "altRu": "Галактика NGC 4526 со сверхновой 1994D — яркой точкой слева внизу от диска",
+    "captionRu": "Сверхновая типа Ia 1994D (яркая точка слева внизу) в галактике NGC 4526. Снимок телескопа Hubble",
+    "focal": [
+      0.45,
+      0.55
+    ]
+  },
+  {
+    "id": "perlmutter",
+    "commons": "File:Saul Perlmutter in 2024 at Berkeley Lab 01.jpg",
+    "kind": "portrait",
+    "subject": "Сол Перлмуттер",
+    "altRu": "Портрет Сола Перлмуттера, 2024 год",
+    "captionRu": "Сол Перлмуттер, Berkeley Lab, 2024",
+    "focal": [
+      0.5,
+      0.3
+    ]
+  },
+  {
+    "id": "riess",
+    "commons": "File:Adam Riess Elected to National Academy of Sciences (2009-20-2561).jpg",
+    "kind": "portrait",
+    "subject": "Адам Рисс",
+    "altRu": "Портрет Адама Рисса",
+    "captionRu": "Адам Рисс, 2009",
+    "focal": [
+      0.5,
+      0.35
+    ]
+  },
+  {
+    "id": "schmidt",
+    "commons": "File:Brian Schmidt portrait 1.jpg",
+    "kind": "portrait",
+    "subject": "Брайан Шмидт",
+    "altRu": "Портрет Брайана Шмидта",
+    "captionRu": "Брайан Шмидт",
+    "focal": [
+      0.5,
+      0.3
+    ]
+  },
+  {
+    "id": "hst",
+    "commons": "File:The Hubble Space Telescope in orbit (28247098826).jpg",
+    "kind": "instrument",
+    "subject": "Телескоп Hubble",
+    "altRu": "Космический телескоп Hubble на орбите над Землёй",
+    "captionRu": "Космический телескоп Hubble на орбите",
+    "focal": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "wmap",
+    "commons": "File:WMAP spacecraft.jpg",
+    "kind": "instrument",
+    "subject": "Спутник WMAP",
+    "altRu": "Модель спутника WMAP",
+    "captionRu": "Спутник WMAP",
+    "focal": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "freedman",
+    "commons": "File:Wendy Freedman (4617812603) (cropped).jpg",
+    "kind": "portrait",
+    "subject": "Венди Фридман",
+    "altRu": "Портрет Венди Фридман",
+    "captionRu": "Венди Фридман",
+    "focal": [
+      0.5,
+      0.3
+    ]
+  },
+  {
+    "id": "2dfgrs-map",
+    "commons": "File:2dfgrs.png",
+    "kind": "diagram",
+    "subject": "Карта обзора 2dFGRS",
+    "altRu": "Веерная карта распределения галактик обзора 2dFGRS: два клина с нитями и пустотами",
+    "captionRu": "Распределение галактик по данным обзора 2dFGRS (визуализация 30% выборки)",
+    "focal": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "aat",
+    "commons": "File:Anglo-Australian telescope at Siding Springs Observatory.jpg",
+    "kind": "instrument",
+    "subject": "Anglo-Australian Telescope",
+    "altRu": "Anglo-Australian Telescope внутри купола обсерватории Сайдинг-Спринг",
+    "captionRu": "Anglo-Australian Telescope, на котором работал спектрограф 2dF",
+    "focal": [
+      0.5,
+      0.45
+    ]
+  },
+  {
+    "id": "planck-map",
+    "commons": "File:Cosmic Microwave Background (CMB).jpeg",
+    "kind": "diagram",
+    "subject": "Карта реликтового излучения Planck",
+    "altRu": "Овальная карта всего неба в микроволновом диапазоне: пятна чуть более тёплых и холодных областей",
+    "captionRu": "Карта реликтового излучения всего неба по данным Planck",
+    "focal": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "planck-sat",
+    "commons": "File:Planck Spacecraft (Artist Concept) (PIA13953).tiff",
+    "kind": "instrument",
+    "subject": "Обсерватория Planck",
+    "altRu": "Рисунок обсерватории Planck в космосе",
+    "captionRu": "Обсерватория Planck. Рисунок ESA/NASA/JPL-Caltech",
+    "focal": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "ligo",
+    "commons": "File:LIGO Hanford aerial 05.jpg",
+    "kind": "instrument",
+    "subject": "Детектор LIGO Hanford",
+    "altRu": "Аэрофотоснимок детектора LIGO в Хэнфорде: два плеча длиной по 4 км",
+    "captionRu": "Детектор LIGO в Хэнфорде с высоты",
+    "focal": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "gaia",
+    "commons": "File:Gaia spacecraft.jpeg",
+    "kind": "instrument",
+    "subject": "Спутник Gaia",
+    "altRu": "Рисунок спутника Gaia",
+    "captionRu": "Астрометрический спутник Gaia. Рисунок ESA",
+    "focal": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "m106",
+    "commons": "File:Messier 106 visible and infrared composite.jpg",
+    "kind": "archive",
+    "subject": "Галактика NGC 4258 (M106)",
+    "altRu": "Спиральная галактика M106 (NGC 4258) со светящимися рукавами",
+    "captionRu": "Галактика NGC 4258 (M106): её мазерный диск — геометрический якорь лестницы расстояний",
+    "focal": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "euclid",
+    "commons": "File:Euclid spacecraft ESA24912474.jpg",
+    "kind": "instrument",
+    "subject": "Телескоп Euclid",
+    "altRu": "Рисунок телескопа Euclid в космосе",
+    "captionRu": "Телескоп Euclid. Рисунок ESA",
+    "focal": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "jwst",
+    "commons": "File:James Webb Space Telescope Mirror37.jpg",
+    "kind": "instrument",
+    "subject": "Зеркало телескопа Webb",
+    "altRu": "Золотое сегментированное главное зеркало телескопа Webb в сборочном цехе",
+    "captionRu": "Главное зеркало телескопа James Webb перед запуском",
+    "focal": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "mayall-desi",
+    "commons": "File:The Dark Energy Spectroscopic Instrument (DESI) installed on the Nicholas U Mayall 4-meter Telescope (noirlab-mayall-desi-1).jpg",
+    "kind": "instrument",
+    "subject": "DESI на телескопе Mayall",
+    "altRu": "Инструмент DESI, установленный на 4-метровом телескопе Mayall внутри купола",
+    "captionRu": "Спектрограф DESI на 4-метровом телескопе Mayall, Kitt Peak",
+    "focal": [
+      0.5,
+      0.45
+    ]
+  },
+  {
+    "id": "act",
+    "commons": "File:Atacama Cosmology Telescope from distance.JPG",
+    "kind": "instrument",
+    "subject": "Atacama Cosmology Telescope",
+    "altRu": "Atacama Cosmology Telescope в пустынном ландшафте Чили",
+    "captionRu": "Atacama Cosmology Telescope (ACT), Чили",
+    "focal": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "spt",
+    "commons": "File:South pole telescope nov2009.jpg",
+    "kind": "instrument",
+    "subject": "South Pole Telescope",
+    "altRu": "South Pole Telescope на фоне неба Антарктиды",
+    "captionRu": "South Pole Telescope (SPT), станция Амундсен-Скотт",
+    "focal": [
+      0.5,
+      0.45
+    ]
+  },
+  {
+    "id": "desi-map",
+    "commons": "File:Full DESI year-five map (noirlab2610b).jpg",
+    "kind": "diagram",
+    "subject": "Пятилетняя карта DESI",
+    "altRu": "Круговая трёхмерная карта галактик и квазаров DESI за пять лет наблюдений",
+    "captionRu": "Полная карта DESI за пять лет наблюдений (2026)",
+    "focal": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "kitt-peak",
+    "commons": "File:Kitt Peak National Observatory Beneath Star Trails (noirlab2512ae).jpg",
+    "kind": "archive",
+    "subject": "Обсерватория Kitt Peak",
+    "altRu": "Обсерватория Kitt Peak под треками звёзд на длинной выдержке",
+    "captionRu": "Обсерватория Kitt Peak под треками звёзд; самый высокий купол — телескоп Mayall с DESI",
+    "focal": [
+      0.5,
+      0.6
+    ]
+  }
+]

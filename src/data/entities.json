@@ -1,0 +1,518 @@
+[
+  {
+    "id": "leavitt",
+    "nameRu": "Генриетта Ливитт",
+    "nameOriginal": "Henrietta Swan Leavitt",
+    "kind": "person",
+    "shortDescription": "Астроном Гарвардской обсерватории. Обнаружила связь периода и светимости цефеид — основу космической лестницы расстояний.",
+    "assetId": "leavitt",
+    "relatedEventIds": [
+      "E001"
+    ]
+  },
+  {
+    "id": "slipher",
+    "nameRu": "Весто Слайфер",
+    "nameOriginal": "Vesto Melvin Slipher",
+    "kind": "person",
+    "shortDescription": "Астроном обсерватории Лоуэлла. Первым измерил скорости спиральных туманностей по смещению спектральных линий.",
+    "assetId": "slipher",
+    "relatedEventIds": [
+      "E002",
+      "E007"
+    ]
+  },
+  {
+    "id": "einstein",
+    "nameRu": "Альберт Эйнштейн",
+    "nameOriginal": "Albert Einstein",
+    "kind": "person",
+    "shortDescription": "Автор общей теории относительности. В 1917 году применил её ко всей Вселенной, выбрав статическую модель с Λ.",
+    "assetId": "einstein",
+    "relatedEventIds": [
+      "E003",
+      "E009"
+    ]
+  },
+  {
+    "id": "desitter",
+    "nameRu": "Виллем де Ситтер",
+    "nameOriginal": "Willem de Sitter",
+    "kind": "person",
+    "shortDescription": "Нидерландский астроном. Нашёл собственное решение уравнений с Λ; соавтор модели плоской Вселенной 1932 года.",
+    "assetId": "desitter",
+    "relatedEventIds": [
+      "E003",
+      "E009"
+    ]
+  },
+  {
+    "id": "friedmann",
+    "nameRu": "Александр Фридман",
+    "nameOriginal": "Александр Александрович Фридман",
+    "kind": "person",
+    "shortDescription": "Петроградский математик и физик. Показал, что уравнения относительности допускают меняющийся масштаб Вселенной.",
+    "assetId": "friedmann",
+    "relatedEventIds": [
+      "E004"
+    ]
+  },
+  {
+    "id": "hubble",
+    "nameRu": "Эдвин Хаббл",
+    "nameOriginal": "Edwin Powell Hubble",
+    "kind": "person",
+    "shortDescription": "Астроном обсерватории Маунт-Вилсон. Доказал, что Андромеда — другая галактика, и опубликовал зависимость скорости от расстояния.",
+    "assetId": "hubble",
+    "relatedEventIds": [
+      "E005",
+      "E007",
+      "E032"
+    ]
+  },
+  {
+    "id": "lemaitre",
+    "nameRu": "Жорж Леметр",
+    "nameOriginal": "Georges Lemaître",
+    "kind": "person",
+    "shortDescription": "Бельгийский священник и физик. В 1927 году вывел связь расширения с красным смещением и оценил её по наблюдениям.",
+    "assetId": "lemaitre",
+    "relatedEventIds": [
+      "E006",
+      "E008",
+      "E032"
+    ]
+  },
+  {
+    "id": "zwicky",
+    "nameRu": "Фриц Цвикки",
+    "nameOriginal": "Fritz Zwicky",
+    "kind": "person",
+    "shortDescription": "Астроном Калтеха. По скоростям галактик в скоплении Волос Вероники указал на недостающую массу.",
+    "assetId": "zwicky",
+    "relatedEventIds": [
+      "E010"
+    ]
+  },
+  {
+    "id": "gamow",
+    "nameRu": "Георгий Гамов",
+    "nameOriginal": "George Gamow",
+    "kind": "person",
+    "shortDescription": "Физик-теоретик. Развивал картину горячей ранней Вселенной и образования элементов.",
+    "assetId": "gamow",
+    "relatedEventIds": [
+      "E011"
+    ]
+  },
+  {
+    "id": "alpher",
+    "nameRu": "Ральф Альфер",
+    "nameOriginal": "Ralph Alpher",
+    "kind": "person",
+    "shortDescription": "Физик. Вместе с Робертом Германом предсказал остаточное излучение с температурой около 5 K.",
+    "assetId": "alpher",
+    "relatedEventIds": [
+      "E011"
+    ]
+  },
+  {
+    "id": "herman",
+    "nameRu": "Роберт Герман",
+    "nameOriginal": "Robert Herman",
+    "kind": "person",
+    "shortDescription": "Физик. Соавтор предсказания температуры реликтового излучения 1948 года.",
+    "assetId": null,
+    "relatedEventIds": [
+      "E011"
+    ]
+  },
+  {
+    "id": "hoyle",
+    "nameRu": "Фред Хойл",
+    "nameOriginal": "Fred Hoyle",
+    "kind": "person",
+    "shortDescription": "Британский астрофизик, соавтор стационарной теории. В эфире BBC в 1949 году произнёс слова «Big Bang».",
+    "assetId": "hoyle",
+    "relatedEventIds": [
+      "E012"
+    ]
+  },
+  {
+    "id": "baade",
+    "nameRu": "Вальтер Бааде",
+    "nameOriginal": "Walter Baade",
+    "kind": "person",
+    "shortDescription": "Астроном Маунт-Вилсон и Паломара. Различил звёздные населения и пересмотрел цефеидную шкалу расстояний.",
+    "assetId": "baade",
+    "relatedEventIds": [
+      "E013"
+    ]
+  },
+  {
+    "id": "sandage",
+    "nameRu": "Аллан Сэндидж",
+    "nameOriginal": "Allan Sandage",
+    "kind": "person",
+    "shortDescription": "Ученик Хаббла. Десятилетиями уточнял шкалу расстояний; в 1958 году получил H₀ около 75.",
+    "assetId": "sandage",
+    "relatedEventIds": [
+      "E014",
+      "E017"
+    ]
+  },
+  {
+    "id": "penzias",
+    "nameRu": "Арно Пензиас",
+    "nameOriginal": "Arno Penzias",
+    "kind": "person",
+    "shortDescription": "Радиоастроном Bell Labs. Вместе с Робертом Вильсоном обнаружил реликтовое излучение.",
+    "assetId": "penzias",
+    "relatedEventIds": [
+      "E015"
+    ]
+  },
+  {
+    "id": "wilson",
+    "nameRu": "Роберт Вильсон",
+    "nameOriginal": "Robert Woodrow Wilson",
+    "kind": "person",
+    "shortDescription": "Радиоастроном Bell Labs. Соавтор открытия реликтового излучения на рупорной антенне в Холмделе.",
+    "assetId": "wilson",
+    "relatedEventIds": [
+      "E015"
+    ]
+  },
+  {
+    "id": "rubin",
+    "nameRu": "Вера Рубин",
+    "nameOriginal": "Vera Rubin",
+    "kind": "person",
+    "shortDescription": "Астроном Института Карнеги. Её измерения вращения галактик стали ключевым свидетельством тёмной материи.",
+    "assetId": "rubin",
+    "relatedEventIds": [
+      "E016"
+    ]
+  },
+  {
+    "id": "ford",
+    "nameRu": "Кент Форд",
+    "nameOriginal": "W. Kent Ford Jr.",
+    "kind": "person",
+    "shortDescription": "Астроном и конструктор чувствительных спектрографов; соавтор измерений кривых вращения галактик.",
+    "assetId": null,
+    "relatedEventIds": [
+      "E016"
+    ]
+  },
+  {
+    "id": "guth",
+    "nameRu": "Алан Гут",
+    "nameOriginal": "Alan Guth",
+    "kind": "person",
+    "shortDescription": "Физик-теоретик. Статья 1981 года ввела термин «инфляция» для ранней стадии ускоренного расширения.",
+    "assetId": "guth",
+    "relatedEventIds": [
+      "E018"
+    ]
+  },
+  {
+    "id": "linde",
+    "nameRu": "Андрей Линде",
+    "nameOriginal": "Андрей Дмитриевич Линде",
+    "kind": "person",
+    "shortDescription": "Физик-теоретик. Автор вариантов инфляционной модели, исправивших недостатки первой версии.",
+    "assetId": "linde",
+    "relatedEventIds": [
+      "E018"
+    ]
+  },
+  {
+    "id": "starobinsky",
+    "nameRu": "Алексей Старобинский",
+    "nameOriginal": "Алексей Александрович Старобинский",
+    "kind": "person",
+    "shortDescription": "Физик-теоретик. Одним из первых рассмотрел раннюю стадию ускоренного расширения Вселенной.",
+    "assetId": "starobinsky",
+    "relatedEventIds": [
+      "E018"
+    ]
+  },
+  {
+    "id": "mather",
+    "nameRu": "Джон Мазер",
+    "nameOriginal": "John C. Mather",
+    "kind": "person",
+    "shortDescription": "Руководил научной работой прибора FIRAS на спутнике COBE, измерившего спектр реликтового излучения.",
+    "assetId": "mather",
+    "relatedEventIds": [
+      "E019"
+    ]
+  },
+  {
+    "id": "smoot",
+    "nameRu": "Джордж Смут",
+    "nameOriginal": "George Smoot",
+    "kind": "person",
+    "shortDescription": "Руководил прибором DMR на COBE, обнаружившим первичные неоднородности реликтового излучения.",
+    "assetId": "smoot",
+    "relatedEventIds": [
+      "E020"
+    ]
+  },
+  {
+    "id": "perlmutter",
+    "nameRu": "Сол Перлмуттер",
+    "nameOriginal": "Saul Perlmutter",
+    "kind": "person",
+    "shortDescription": "Руководитель Supernova Cosmology Project, одной из двух команд, открывших ускоренное расширение.",
+    "assetId": "perlmutter",
+    "relatedEventIds": [
+      "E022"
+    ]
+  },
+  {
+    "id": "riess",
+    "nameRu": "Адам Рисс",
+    "nameOriginal": "Adam Riess",
+    "kind": "person",
+    "shortDescription": "Соавтор открытия ускорения 1998 года; руководитель программы SH0ES по измерению H₀.",
+    "assetId": "riess",
+    "relatedEventIds": [
+      "E022",
+      "E034",
+      "E037"
+    ]
+  },
+  {
+    "id": "schmidt",
+    "nameRu": "Брайан Шмидт",
+    "nameOriginal": "Brian Schmidt",
+    "kind": "person",
+    "shortDescription": "Руководитель High-Z Supernova Search Team, обнаружившей ускоренное расширение по далёким сверхновым.",
+    "assetId": "schmidt",
+    "relatedEventIds": [
+      "E022"
+    ]
+  },
+  {
+    "id": "freedman",
+    "nameRu": "Венди Фридман",
+    "nameOriginal": "Wendy Freedman",
+    "kind": "person",
+    "shortDescription": "Руководитель HST Key Project (H₀=72±8) и программы CCHP, измеряющей H₀ по красным гигантам.",
+    "assetId": "freedman",
+    "relatedEventIds": [
+      "E024",
+      "E037"
+    ]
+  },
+  {
+    "id": "harvard-plates",
+    "nameRu": "Фотопластинки Гарварда",
+    "nameOriginal": "Harvard College Observatory plate collection",
+    "kind": "instrument",
+    "shortDescription": "Стеклянные фотопластинки, по которым Ливитт сравнивала яркость переменных звёзд.",
+    "assetId": "leavitt-figure",
+    "relatedEventIds": [
+      "E001"
+    ]
+  },
+  {
+    "id": "lowell-spectrograph",
+    "nameRu": "Спектрограф Слайфера",
+    "nameOriginal": "Lowell Observatory spectrograph",
+    "kind": "instrument",
+    "shortDescription": "Спектрограф 24-дюймового рефрактора обсерватории Лоуэлла, на котором получены первые скорости туманностей.",
+    "assetId": "slipher-spectrograph",
+    "relatedEventIds": [
+      "E002"
+    ]
+  },
+  {
+    "id": "hooker",
+    "nameRu": "Телескоп Hooker",
+    "nameOriginal": "100-inch Hooker Telescope",
+    "kind": "instrument",
+    "shortDescription": "100-дюймовый рефлектор обсерватории Маунт-Вилсон, крупнейший в мире в 1917–1949 годах.",
+    "assetId": "hooker",
+    "relatedEventIds": [
+      "E005",
+      "E007"
+    ]
+  },
+  {
+    "id": "horn-antenna",
+    "nameRu": "Рупорная антенна Холмдела",
+    "nameOriginal": "Holmdel Horn Antenna",
+    "kind": "instrument",
+    "shortDescription": "Антенна Bell Labs, построенная для спутниковой связи; на ней обнаружено реликтовое излучение.",
+    "assetId": "horn-antenna",
+    "relatedEventIds": [
+      "E015"
+    ]
+  },
+  {
+    "id": "cobe",
+    "nameRu": "COBE",
+    "nameOriginal": "Cosmic Background Explorer",
+    "kind": "mission",
+    "shortDescription": "Спутник NASA (1989–1993). Измерил спектр реликтового излучения и обнаружил его первичные неоднородности.",
+    "assetId": "cobe",
+    "relatedEventIds": [
+      "E019",
+      "E020"
+    ]
+  },
+  {
+    "id": "hst",
+    "nameRu": "Телескоп Hubble",
+    "nameOriginal": "Hubble Space Telescope",
+    "kind": "mission",
+    "shortDescription": "Космический телескоп NASA/ESA. Ключевой инструмент цефеидной лестницы расстояний с 1990-х по сегодня.",
+    "assetId": "hst",
+    "relatedEventIds": [
+      "E022",
+      "E024",
+      "E034",
+      "E037"
+    ]
+  },
+  {
+    "id": "boomerang",
+    "nameRu": "BOOMERanG",
+    "nameOriginal": "BOOMERanG",
+    "kind": "experiment",
+    "shortDescription": "Стратосферный шар с микроволновым телескопом, облетевший Антарктиду в 1998–1999 годах.",
+    "assetId": null,
+    "relatedEventIds": [
+      "E023"
+    ]
+  },
+  {
+    "id": "wmap",
+    "nameRu": "WMAP",
+    "nameOriginal": "Wilkinson Microwave Anisotropy Probe",
+    "kind": "mission",
+    "shortDescription": "Спутник NASA (2001–2010). Первая детальная карта реликтового излучения всего неба.",
+    "assetId": "wmap",
+    "relatedEventIds": [
+      "E025"
+    ]
+  },
+  {
+    "id": "sdss",
+    "nameRu": "Телескоп SDSS",
+    "nameOriginal": "Sloan Digital Sky Survey 2.5-m Telescope",
+    "kind": "instrument",
+    "shortDescription": "2,5-метровый телескоп в Apache Point. Обзор SDSS дал трёхмерную карту галактик, где найдены BAO.",
+    "assetId": null,
+    "relatedEventIds": [
+      "E026"
+    ]
+  },
+  {
+    "id": "planck",
+    "nameRu": "Planck",
+    "nameOriginal": "Planck",
+    "kind": "mission",
+    "shortDescription": "Обсерватория ESA (2009–2013). Самая точная карта реликтового излучения и опорный «паспорт» ΛCDM.",
+    "assetId": "planck-sat",
+    "relatedEventIds": [
+      "E028",
+      "E029",
+      "E031"
+    ]
+  },
+  {
+    "id": "ligo",
+    "nameRu": "LIGO / Virgo",
+    "nameOriginal": "LIGO and Virgo",
+    "kind": "instrument",
+    "shortDescription": "Гравитационно-волновые детекторы. Слияние GW170817 стало первой «стандартной сиреной».",
+    "assetId": "ligo",
+    "relatedEventIds": [
+      "E030"
+    ]
+  },
+  {
+    "id": "gaia",
+    "nameRu": "Gaia",
+    "nameOriginal": "Gaia",
+    "kind": "mission",
+    "shortDescription": "Астрометрический спутник ESA. Его параллаксы — геометрический якорь современной лестницы расстояний.",
+    "assetId": "gaia",
+    "relatedEventIds": [
+      "E034"
+    ]
+  },
+  {
+    "id": "maser-disk",
+    "nameRu": "Мазерный диск NGC 4258",
+    "nameOriginal": "NGC 4258 megamaser disk",
+    "kind": "instrument",
+    "shortDescription": "Диск водяных мазеров вокруг чёрной дыры галактики NGC 4258 (M106) — геометрический якорь расстояний.",
+    "assetId": "m106",
+    "relatedEventIds": [
+      "E033",
+      "E034"
+    ]
+  },
+  {
+    "id": "euclid",
+    "nameRu": "Euclid",
+    "nameOriginal": "Euclid",
+    "kind": "mission",
+    "shortDescription": "Телескоп ESA, запущенный 1 июля 2023 года для картографирования геометрии и роста структуры Вселенной.",
+    "assetId": "euclid",
+    "relatedEventIds": [
+      "E035"
+    ]
+  },
+  {
+    "id": "jwst",
+    "nameRu": "Телескоп Webb",
+    "nameOriginal": "James Webb Space Telescope",
+    "kind": "mission",
+    "shortDescription": "Инфракрасный телескоп NASA/ESA/CSA. С 2025 года проверяет цефеидную и TRGB-калибровки лестницы расстояний.",
+    "assetId": "jwst",
+    "relatedEventIds": [
+      "E037"
+    ]
+  },
+  {
+    "id": "desi",
+    "nameRu": "DESI",
+    "nameOriginal": "Dark Energy Spectroscopic Instrument",
+    "kind": "instrument",
+    "shortDescription": "Спектрограф на 4-метровом телескопе Mayall в Kitt Peak. Крупнейшая трёхмерная карта галактик и квазаров.",
+    "assetId": "mayall-desi",
+    "relatedEventIds": [
+      "E036",
+      "E041",
+      "E043"
+    ]
+  },
+  {
+    "id": "act",
+    "nameRu": "ACT",
+    "nameOriginal": "Atacama Cosmology Telescope",
+    "kind": "instrument",
+    "shortDescription": "Наземный микроволновый телескоп в Чили (2007–2022). Независимая проверка результатов Planck.",
+    "assetId": "act",
+    "relatedEventIds": [
+      "E038"
+    ]
+  },
+  {
+    "id": "spt",
+    "nameRu": "SPT",
+    "nameOriginal": "South Pole Telescope",
+    "kind": "instrument",
+    "shortDescription": "10-метровый микроволновый телескоп на Южном полюсе. Камера SPT-3G уточняет параметры ΛCDM.",
+    "assetId": "spt",
+    "relatedEventIds": [
+      "E038"
+    ]
+  }
+]
