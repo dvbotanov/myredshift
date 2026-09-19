@@ -12,6 +12,21 @@
 <body data-view="horizontal">
 <a class="skip" href="#chapters">Перейти к оглавлению</a>
 <div id="app">
+  <section id="intro" class="intro" aria-labelledby="intro-title">
+    <img class="intro-bg" id="intro-bg" alt="" aria-hidden="true" decoding="async" fetchpriority="high">
+    <div class="intro-shade" aria-hidden="true"></div>
+    <div class="intro-content">
+      <p class="intro-kicker">Интерактивная экспозиция</p>
+      <h1 class="intro-title" id="intro-title">Расширение Вселенной</h1>
+      <p class="intro-sub">От звёздного неба до космологии высокой точности: как за сто лет наблюдений менялась картина мира и почему сегодня самые точные измерения не сходятся.</p>
+      <div class="intro-actions">
+        <button type="button" class="btn btn-lg" data-goto="prologue">Начать путешествие</button>
+        <button type="button" class="btn-ghost btn-lg" data-view-reading data-goto="prologue">Читать без анимации</button>
+      </div>
+      <p class="intro-hint" aria-hidden="true">Прокручивайте вниз — путешествуйте вправо ↓</p>
+    </div>
+    <p class="intro-credit" id="intro-credit"></p>
+  </section>
   <section id="story" class="story" aria-label="Экспозиция">
     <div class="stage" id="stage">
       <header class="topbar">

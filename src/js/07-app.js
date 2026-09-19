@@ -102,7 +102,7 @@
         else goTo(t.dataset.scene, { push: true });
         return;
       }
-      if (t.dataset.goto) {
+      if (t.dataset.goto && !t.hasAttribute('data-view-reading')) {
         e.preventDefault();
         if (Cosmo.dialog.isOpen()) Cosmo.dialog.close();
         goTo(t.dataset.goto, { push: true });
@@ -113,7 +113,7 @@
       if (t.dataset.asset) { Cosmo.dialog.asset(t.dataset.asset, t); return; }
       if (t.dataset.term) { Cosmo.dialog.term(t.dataset.term, t); return; }
       if (t.hasAttribute('data-fullchart')) { Cosmo.dialog.fullChart(t); return; }
-      if (t.hasAttribute('data-view-reading')) { pref('reading'); applyView('reading', true); return; }
+      if (t.hasAttribute('data-view-reading')) { pref('reading'); applyView('reading', !t.dataset.goto); if (t.dataset.goto) goTo(t.dataset.goto, { push: true }); return; }
     });
     document.getElementById('btn-prev').addEventListener('click', function () { if (Cosmo.scroll.isEnabled()) Cosmo.scroll.goTo(Cosmo.scroll.state.active - 1, { push: true }); });
     document.getElementById('btn-next').addEventListener('click', function () { if (Cosmo.scroll.isEnabled()) Cosmo.scroll.goTo(Cosmo.scroll.state.active + 1, { push: true }); });
@@ -160,6 +160,13 @@
     });
   }
 
+  function initIntro() {
+    var bg = document.getElementById('intro-bg'), cr = document.getElementById('intro-credit');
+    var a = Cosmo.data.byId.assets.hudf, uri = Cosmo.data.assetUri('hudf', 'img');
+    if (bg && uri) { bg.src = uri; bg.width = a.width; bg.height = a.height; }
+    if (cr && a) cr.innerHTML = U.fmt(a.captionRu) + '. ' + Cosmo.render.credit(a);
+  }
+
   function init() {
     D = Cosmo.data.load();
     scenes = D.scenes.slice().sort(function (a, b) { return a.order - b.order; });
@@ -186,9 +193,9 @@
       if (v !== document.body.dataset.view) applyView(v, true);
     }, 200));
 
+    initIntro();
     var sid = sceneFromHash();
     if (sid) goTo(sid, { push: false, instant: true, announce: false });
-    else if (Cosmo.scroll.isEnabled()) Cosmo.scroll.goTo(0, { instant: true, announce: false });
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();

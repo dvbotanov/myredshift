@@ -83,7 +83,7 @@ def main():
     problems = []
     for w in wanted:
         aid = w["id"]
-        info = commons.info(w["commons"], width=HERO_W + 200)
+        info = commons.info(w["commons"], width=1800 if w.get("large") else HERO_W + 200)
         if not info:
             problems.append(f"{aid}: файл не найден на Commons ({w['commons']})")
             continue
@@ -106,7 +106,9 @@ def main():
         thumb = os.path.join(THUMB, aid + ".jpg")
         try:
             if force or not os.path.exists(hero):
-                if aid in hero_ids:
+                if w.get("large"):
+                    make_hero(src_path, hero, 1600, 42)
+                elif aid in hero_ids:
                     make_hero(src_path, hero)
                 else:
                     make_hero(src_path, hero, SECONDARY_W, JPEG_Q_SEC)
@@ -123,7 +125,7 @@ def main():
             "localPath": f"assets/img/{aid}.jpg",
             "thumbnailPath": f"assets/thumb/{aid}.jpg",
             "width": hw, "height": hh,
-            "role": "hero" if aid in hero_ids else "secondary",
+            "role": "background" if w.get("large") else ("hero" if aid in hero_ids else "secondary"),
             "kind": w["kind"],
             "subject": w["subject"],
             "altRu": w["altRu"],

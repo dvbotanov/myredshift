@@ -1,5 +1,18 @@
 [
   {
+    "id": "hudf",
+    "commons": "File:NASA-HS201427a-HubbleUltraDeepField2014-20140603.jpg",
+    "kind": "archive",
+    "large": true,
+    "subject": "Сверхглубокое поле Хаббла",
+    "altRu": "Сверхглубокое поле Хаббла: тысячи далёких галактик разных цветов и форм на чёрном фоне",
+    "captionRu": "Сверхглубокое поле Хаббла (Hubble Ultra Deep Field), версия 2014 года: около 10 000 галактик на участке неба меньше десятой доли диаметра Луны",
+    "focal": [
+      0.5,
+      0.5
+    ]
+  },
+  {
     "id": "leavitt",
     "commons": "File:Henrietta Swan Leavitt.jpg",
     "kind": "portrait",
